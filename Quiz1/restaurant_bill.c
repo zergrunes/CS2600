@@ -17,7 +17,7 @@
 int main (int argc, char* argv[]){
 
     // Asking for user input
-    printf("Got a problem calculating your restaurant bill? Look no more and use our calculator.\n"
+    printf("\nGot a problem calculating your restaurant bill? Look no more and use our calculator.\n"
            "Please enter the restaurant tax and your tip as percentages in this form:\n "
            "./restaurant_bill (tax) (tip)\n"
            "NOTE: We accept tax rates > 0 and tips >= 0.\n");
