@@ -38,12 +38,13 @@ int main(){
                 char input = getchar();
                 switch(input){
                     case 'q':
+                        return 0;
                         break;
-                    default:
+                    default: // okay this is where i went wrong lol
                         scanf("%d",&userGuess);
                         randNum = rand()%maxNum+1;
-                        if(userGuess>randNum) printf("Too high!\n"); // I think putting brackets around this would make it easier to read?
-                        else if(userGuess<randNum) printf("Too low!\n");
+                        if(userGuess>randNum){printf("Too high!\n");} 
+                        else if(userGuess<randNum) {printf("Too low!\n");}
                         else{
                             wins = 1;
                             printf("You guessed it!\n");
@@ -51,8 +52,6 @@ int main(){
                         }
                         numOfGuess++;
                 }
-            while(input !='q' || randNum == userGuess)
-                break;
             
             /* end of case 1 */
         /* If option 2 is chosen, then tell them the max value they can set the number.*/
@@ -68,7 +67,7 @@ int main(){
             }
 
             while(max < 0 || max >= 10);
-                printf("New number range will be betwee 0 to %d\n", maxNum);
+                printf("New number range will be between 0 to %d\n", maxNum);
             break;
             /* end of case 2 */
         /*
@@ -94,3 +93,10 @@ int main(){
     while(userOption != 3);
         return 0;
 }
+
+/** NOTE FOR PROFESSOR: 
+ * I'm like 100% sure a part of this code does not run the way you wanted it to.
+ * I was confused about the persist part and understanding the syntax for C, and
+ * I would appreciate it if you can explain where I went wrong (or I can go to your office hours to talk about it)
+ * thank you professor. 
+ **/
