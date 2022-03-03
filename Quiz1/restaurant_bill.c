@@ -2,18 +2,13 @@
  * CS 2600 Quiz 1
  * @file restaurant_bill.c
  * @Marian Remoroza 
- * @brief 
  * @version 0.1
  * @date 2022-03-02
- * 
- * @copyright Copyright (c) 2022
- * 
  */
-
 /**
  * stdio.h for input/output functions
- * time.h 
- * stdlib.h for rng  
+ * time.h for the rng
+ * stdlib.h for conversion
  */
 #include <stdio.h>
 #include <stdlib.h>
@@ -29,23 +24,25 @@ int main (int argc, char* argv[]){
 
     // Input validation
     if (argc != 3){
-        printf("Wrong input, please enter the restaurant tax and your tip as percentages in this form:\n"
-               ".restaurant_bill.out (tax) (tip)\n");
+        printf("\nERROR:\n Please enter the restaurant tax and your tip:\n"
+               "./restaurant_bill.out (tax) (tip)\n");
     } else{
         printf("\nMENU:\n"
                "Salad: $9.95\n"
                "Soup: $4.55\n"
                "Sandwich: $13.25\n"
                "Pizza: $22.35\n");
-        
+
+        // initializing enum for the meals so it's easier to work with
         char *meal[4]={"Salad","Soup","Sandwich","Pizza"};
         double price[4]={9.95,4.55,13.25,22.35};
 
+       // for the rng
         int rand_meal = 0;
         time_t t;
 
-        srand((unsigned) time(&t));
-
+        srand(time(&t));
+       // we initialized char *meal to 4 so we can do the % operation when finding a random num
         rand_meal = rand() % 4;
 
         printf("\nWe got our randomizer choose your meal for you\n%s: ", meal[rand_meal]);
