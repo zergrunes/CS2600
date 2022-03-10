@@ -9,11 +9,11 @@
         ""
       ],
       "stopAtEntry": true,
-      "cwd": "/Users/macmern/GIT",
+      "cwd": "/Users/macmern/GIT/Project-2",
       "environment": [],
-      "program": "/Users/macmern/GIT/build/Debug/outDebug",
+      "program": "/Users/macmern/GIT/Project-2/build/Debug/outDebug",
       "internalConsoleOptions": "openOnSessionStart",
-      "MIMode": "gdb",
+      "MIMode": "lldb",
       "externalConsole": true
     }
   ]
